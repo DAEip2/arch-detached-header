@@ -1,5 +1,4 @@
-# arch-linux-detached-header
-WARNING: THE script.sh MAYBE DOESN'T WORK NOW.  
+# arch-detached-header
 This script installs an encrypted Arch Linux system with a detached header. Before running it, ensure you have a completely blank main disk and boot partition.  
 The path to the main disk is 'MAIN_PART' in the code (e.g., '/dev/sda') with no existing partitions.  
 The path to the boot partition is 'BOOT_PART' in the code (e.g., '/dev/sdb1').  
