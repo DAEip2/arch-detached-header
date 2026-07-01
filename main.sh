@@ -54,7 +54,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --removable --recheck
 echo "GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR='Arch'
-GRUB_CMDLINE_LINUX_DEFAULT='loglevel=3 root=UUID="${ROOT_UUID}" rd.luks.uuid="${LUKS_UUID}" rd.luks.name="${LUKS_UUID}"=ROOT0 rd.luks.data="${LUKS_UUID}"=/dev/disk/by-id/"${MAIN_DISK_ID}" rd.luks.options="${LUKS_UUID}"=header=/header.img:UUID="${BOOT_UUID}"'
+GRUB_CMDLINE_LINUX_DEFAULT='loglevel=3 root=UUID="${ROOT_UUID}" rd.luks.uuid="${LUKS_UUID}" rd.luks.name="${LUKS_UUID}"=ROOT0 rd.luks.data="${LUKS_UUID}"="${MAIN_DISK_ID}" rd.luks.options="${LUKS_UUID}"=header=/header.img:UUID="${BOOT_UUID}"'
 GRUB_CMDLINE_LINUX=''" > /etc/default/grub
 
 grub-mkconfig -o /boot/grub/grub.cfg
